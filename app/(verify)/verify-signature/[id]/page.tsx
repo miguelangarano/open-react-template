@@ -123,7 +123,7 @@ export default async function VerifySignatureById({
 	);
 }
 
-export const getSignatureData = async (id: string) => {
+const getSignatureData = async (id: string) => {
 	const res = await fetch(
 		`${process.env.NEXT_PUBLIC_BACKEND_API ?? ""}/signature/${id}`,
 		{ next: { revalidate: 0 } }
